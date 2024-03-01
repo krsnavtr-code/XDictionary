@@ -29,6 +29,11 @@ const XDictionary = () => {
     }
   };
 
+  // Function to handle button click
+  const handleButtonClick = () => {
+    handleSearch(); 
+  };
+
   return (
     <div>
       <h1>Dictionary App</h1>
@@ -40,7 +45,7 @@ const XDictionary = () => {
         placeholder="Search for a word..."
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleButtonClick}>Search</button>
       <div>
         {resultMessage && (
           <p>
